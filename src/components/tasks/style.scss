@@ -1,0 +1,53 @@
+//================================================================ IMPORT
+@import '../../assets/scss/main.scss';
+
+.main-tasks {
+    @include title();
+    max-width: 1274px;
+    min-height: 100vh;
+
+    .title {
+        margin-bottom: 2em;
+    }
+}
+
+.no-task {
+    @include is-flex-column(center, center);
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+            .group-header {
+            @include is-flex-column(center, center);
+
+            &:hover {
+                .fas {
+                    @extend .jello-horizontal
+                }
+            }
+        }
+
+        h1 {
+            margin-bottom: .8em;
+        }
+
+        .content {
+            @include is-flex-column(center, center);
+        }
+
+        .icon {
+            font-size: 3em;
+            margin: 0;
+            margin-bottom: .4em;
+        }
+
+        .background-svg {
+            position: absolute;
+        }
+    }
+
+    .content-cards {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }

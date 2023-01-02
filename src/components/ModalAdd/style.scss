@@ -1,0 +1,107 @@
+//================================================================ IMPORT
+@import '../../assets/scss/main.scss';
+
+.modal-container {
+    @include is-flex(center, center);
+}
+
+.background-modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .75);
+    position: fixed;
+}
+
+.menu {
+    display: flex;
+    max-height: 15%;
+    @include is-flex(center, flex-start);
+}
+
+.group-button {
+    height: 10%;
+    @include is-flex(center, flex-end);
+
+    button:first-child {
+        margin-right: .7em;
+    }
+}
+
+.menu-group {
+    margin-right: 1em;
+    margin-bottom: .1em;
+
+    h3 {
+        color: white !important;
+        font-weight: 600;
+
+        i {
+            padding-left: .2em;
+        }
+    }
+
+    i {
+        font-size: 15px;
+    }
+
+    button {
+        height: 36px;
+    }
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 70px;
+    top: 0;
+    padding: 1.5em;
+    background-color: $color6;
+    position: absolute;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+
+    &>* {
+        flex-wrap: wrap;
+    }
+}
+
+.group-text {
+    height: 65%;
+    margin: 1em 0;
+    border-radius: .7em;
+    box-shadow: $shadow1;
+    background-color: white;
+    padding: 1em 1.5em;
+
+    hr {
+        opacity: .3;
+    }
+}
+
+
+.text-area {
+    height: 100%;
+    margin-top: 1em;
+    outline: 0;
+    overflow: auto;
+    outline: 0;
+
+    @include scroll();
+}
+
+[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data-text);
+    color: gray;
+}
+
+
+
+@media (max-width: 470px) {
+    .group-text {
+      height: 60%;
+    }
+  }

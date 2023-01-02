@@ -1,0 +1,11 @@
+//================================================================ IMPORT
+@import './_shadow.scss';
+
+input {
+    height: 36px;
+    outline: none;
+    border: none;
+    border-radius: .75em 0 0 .75em;
+    padding: 0 .8em 0 .8em;
+    background-color:white;
+}

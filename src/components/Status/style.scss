@@ -1,0 +1,117 @@
+//================================================================ IMPORT
+@import '../../assets/scss/main.scss';
+
+.status-section {
+    @include is-flex(center, center);
+    margin-bottom: 2em;
+    background-image: $gradient1;
+    max-height: 50vh;
+    padding: 2em 1em;
+
+    .status-content {
+        @include is-flex(center, center);
+        padding: 1.5em 2.5em;
+        border-radius: 1em;
+        width: max-content;
+        position: relative;
+    }
+
+}
+
+.group-header {
+    margin-bottom: 1em;
+
+    h1 {
+        margin-right: .2em;
+        font-size: 4em;
+        color: white;
+    }
+
+    h2,
+    h3 {
+        opacity: .9;
+        color: white;
+    }
+
+    span {
+        font-size: .7em;
+        opacity: .9;
+        color: white;
+    }
+
+    p {
+        opacity: .9;
+        max-width: 70%;
+        color: white;
+    }
+
+    .group-percent {
+        @include is-flex(baseline, flex-start);
+    }
+
+    .status-bar {
+        width: 100%;
+        height: 7px;
+        border-radius: 1em;
+        background-color: rgba(0, 0, 0, 0.2);
+        position: relative;
+        margin-bottom: .4em;
+
+        .bar {
+            // width: 25%;
+            border-radius: 1em;
+            height: 7px;
+            transition: $transition;
+            position: relative;
+            background-image: $gradient3;
+        }
+    }
+}
+
+.status-item{
+    h2{
+        color: white;
+        opacity: .8;
+    }
+}
+.total {
+    @include is-flex(baseline, center);
+    background-color: rgb(255, 255, 255);
+    width: max-content;
+    padding: .5em 1em;
+    border-radius: 13px;
+    box-shadow: $shadow3;
+    position: absolute;
+    bottom: -50px;
+
+    h2 {
+        font-weight: bold;
+        margin-right: .2em;
+    }
+
+    i{
+        margin-right: .4em;
+    }
+}
+
+.group-bottom {
+    @include is-flex-column(center, center); 
+    margin-left: 3em;  
+
+    .group-info-header {
+        @include is-flex(center, center);
+
+        h1 {
+            margin: 0 .2em;
+            font-size: 3em;
+            color: white;
+        }
+
+        h3 {
+            font-size: 1em;
+            max-width: min-content;
+            color: white;
+            opacity: .9;
+        }
+    }
+}

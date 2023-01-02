@@ -1,0 +1,127 @@
+//================================================================ IMPORT
+@import './_shadow.scss';
+@import './_colors.scss';
+@import './_transition.scss';
+
+.btn {
+    padding: 1.2em 2em;
+    border-radius: .75em;
+    font-size: 1.5;
+    transition: $transition;
+    background-size: 200% auto;
+    box-shadow: $shadow2;
+
+    i,
+    h3 {
+        color: white !important;
+    }
+
+    &:hover {
+        background-position: right center;
+        box-shadow: $shadow3;
+
+        i {
+            transform: scale(1.2);
+        }
+    }
+
+    &:active {
+
+        i,
+        h3 {
+            transform: scale(0.95);
+        }
+
+    }
+}
+
+.button-primary {
+    background-image: $gradient1;
+    h3 {
+        font-size: 16px;
+    }
+}
+
+.button-success {
+    background-image: $gradient2;
+}
+
+.button-danger {
+    background-image: $gradient12;
+}
+
+.button-footer {
+    background-image: $gradient4;
+}
+
+
+.button-add-task {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 200% auto;
+    transition: $transition2;
+    background-image: $gradient1;
+    box-shadow: $shadow2;
+    position: fixed;
+
+    i {
+        color: white !important;
+        font-size: 1.5em;
+    }
+
+    &:active {
+        i {
+            transform: scale(0.8);
+        }
+    }
+}
+
+.modal {
+    .menu-item {
+        padding: .7em 1em;
+        margin-right: .3em;
+        background-image: $gradient1;
+
+        &:hover {
+            transform: translateY(-4px);
+        }
+
+        i {
+            margin: 0;
+        }
+    }
+}
+
+.menu-bars-button {
+    background-image: $gradient1;
+    border-radius: 17%;
+    padding: .7em 1em;
+
+    i {
+        color: white !important;
+        font-size: 1.9em;
+    }
+}
+
+.button-close {
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: $shadow3;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: .5em .9em;
+    border-radius: 100%;
+
+    i {
+        margin: 0;
+    }
+
+
+    h2 {
+        color: white;
+    }
+}

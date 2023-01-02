@@ -1,0 +1,23 @@
+
+@mixin title {
+    .title{
+        position: relative;
+        width: max-content;
+
+        i{
+            font-size: 1.2em;
+            margin-right: .4em;
+        }
+
+        &::after{
+            content: "";
+            height: 5px;
+            margin-top: .2em;
+            border-radius: 13px;
+            left: calc(2em * -.5);
+            width: 100%;
+            position: absolute;
+            background-image: $gradient1;
+        }
+    }
+}
